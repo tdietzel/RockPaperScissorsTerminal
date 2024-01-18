@@ -1,40 +1,37 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RockPaperScissors.Models;
 
-namespace RPS.Tests
+namespace RockPaperScissors.Tests
 {
   [TestClass]
   public class RPSTests
   {
     [TestMethod]
-    public void RPSContructor_CreatesInstanceOfRPS_RPS()
+    public void RPSConstructor_CreatesInstanceOfRPS_RPS()
     {
-      RPS newGame = new RPS();
+      RPS newGame = new RPS("Rock", "Scissors");
       Assert.AreEqual(typeof(RPS), newGame.GetType());
     }
     [TestMethod]
     public void player1_win()
     {
-      string game = new RPS();
-
-      string result = game.Play("Paper", "Rock")
-      Assert.AreEqual("Player 1", result);
+      RPS game = new RPS("Paper", "Rock");
+      string result = game.Play();
+      Assert.AreEqual("player 1 wins", result);
     }
     [TestMethod]
     public void player2_win()
     {
-     string game = new RPS();
-
-      string result = game.Play("Paper", "Rock")
-      Assert.AreEqual("Player 2", result);
+     RPS game = new RPS("Rock", "Paper");
+      string result = game.Play();
+      Assert.AreEqual("player 2 wins", result);
     }
     [TestMethod]
     public void draw()
     {
-      string game = new RPS();
-
-      string result = game.Play("Paper", "Paper")
-      Assert.AreEqual("Draw", result);
+      RPS game = new RPS("Paper", "Paper");
+      string result = game.Play();
+      Assert.AreEqual("It's a draw", result);
     }
   }
 }

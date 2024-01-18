@@ -1,15 +1,40 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ExampleName.Models;
+using RockPaperScissors.Models;
 
-namespace ProjectName.Tests
+namespace RPS.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class RPSTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void RPSContructor_CreatesInstanceOfRPS_RPS()
     {
-      // Tests will go here
+      RPS newGame = new RPS();
+      Assert.AreEqual(typeof(RPS), newGame.GetType());
+    }
+    [TestMethod]
+    public void player1_win()
+    {
+      string game = new RPS();
+
+      string result = game.Play("Paper", "Rock")
+      Assert.AreEqual("Player 1", result);
+    }
+    [TestMethod]
+    public void player2_win()
+    {
+     string game = new RPS();
+
+      string result = game.Play("Paper", "Rock")
+      Assert.AreEqual("Player 2", result);
+    }
+    [TestMethod]
+    public void draw()
+    {
+      string game = new RPS();
+
+      string result = game.Play("Paper", "Paper")
+      Assert.AreEqual("Draw", result);
     }
   }
 }

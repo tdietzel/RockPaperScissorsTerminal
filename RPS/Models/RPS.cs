@@ -1,7 +1,7 @@
 namespace RockPaperScissors.Models
 {
-  public class ExampleClass
+  public class RPS
   {
-    // C# code goes here
+
   }
 }

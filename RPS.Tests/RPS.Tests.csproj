@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
@@ -13,11 +12,7 @@
     <PackageReference Include="MSTest.TestAdapter" Version="3.0.4" />
     <PackageReference Include="MSTest.TestFramework" Version="3.0.4" />
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <!-- Change example name to fit project -->
-    <ProjectReference Include="..\ProjectName\ProjectName.csproj" />
+    <ProjectReference Include="..\RPS\RPS.csproj" />
   </ItemGroup>
 
 </Project>

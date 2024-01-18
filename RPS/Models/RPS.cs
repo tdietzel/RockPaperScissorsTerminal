@@ -26,13 +26,10 @@ namespace RockPaperScissors.Models
         return "It's a draw";
       }
       else if (
-                 (Player1 == "rock") &&
-                 (Player2 == "scissors") ||
-                 (Player1 == "paper") &&
-                 (Player2 == "rock") ||
-                 (Player1 == "scissors") &&
-                 (Player2 == "paper")
-               )
+        (Player1 == "rock") && (Player2 == "scissors") ||
+        (Player1 == "paper") && (Player2 == "rock") ||
+        (Player1 == "scissors") && (Player2 == "paper")
+      )
       {
         return "player 1 wins";
       }
